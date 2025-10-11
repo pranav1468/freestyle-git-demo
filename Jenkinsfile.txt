@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     triggers {
-        // Poll SCM every 2 minutes
+        // Poll SCM every 2 minutes 
         pollSCM('H/2 * * * *')
     }
 
@@ -16,6 +16,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building the project..."
+                echo "Change made to test SCM trigger"
             }
         }
 
